@@ -1,0 +1,116 @@
+Wed 30 May 17:49:01 UTC 2018
+
+PINOUT - Crickit running ItsyBitsy M0 (Arduino IDE) firmware
+
+Use with Adafruit ItsyBitsy M0 firmware generated in the
+Arduino IDE; loaded into the CPX Crickit (which is a 'misuse'
+of Crickit -- it's not designed for this).
+
+DETACH the Circuit Playground Express from Crickit!
+
+CPX is not used.  At all.  Not here with ainsuForth in this
+particular configuration, which is meant solely for Crickit
+(standalone, CPX variant).
+
+See the Adafruit website for proper uses of a CPX target
+board, with Crickit (Crickit was designed for use with a
+CPX bolted onto itt).
+
+These pins (below) will respond in an Arduino program
+running on the Crickit, similarly to their response on
+the ItsyBitsy M0.
+
+ItsyBitsyM0.  Note: the list was generated when it was
+believed the CPX was a better starting point for this
+firmware.  As a result, the left half represents pin
+mappings from CPX; the right half from ItsyBitsy M0.
+
+servo1 is D13 on both targets (CPX and ItsyBitsy M0).
+
+  CPX                 ItsyBitsyM0 (ItBM0)
+  ==========          =================
+
+          SORTED
+          ======
+  x       d1  --->    sig6    d1   itsy
+  x       d2  --->    servo4  d2   itsy
+  x       d3  --->    sig7    d3   itsy
+  x       d4  --->    sig8    d4   itsy
+  servo4  d5  --->    servo3  d5   itsy
+  x           --->
+  servo3  d7
+  x      d11  --->    servo2 d11   itsy
+  sig1   d12  --->
+  servo1 d13  --->    servo1 d13   itsy   COMMON DENOM - servo1 across two platforms
+  x      d14  --->    sig1   d14   itsy
+  cap2   d15  --->    sig3   d15   itsy   sig2 is way up at d42
+  cap3   d16  --->    sig4   d16   itsy
+  cap4   d17  --->    cap1   d17   itsy
+  x      d18  --->    cap2   d18   itsy
+  sig4   d20  --->    sig5   d20   itsybitsym0 d20 is sig5 crickit
+  sig3   d21
+  sig5   d22
+  sig7   d23
+  cap1   d24  --->    cap3   d24   itsy
+  x      d25  --->    cap4   d25   itsy
+  darl2  d26
+  darl1  d27
+  x      d28  --->    darl2  d28   itsy
+  x      d29  --->    darl4  d29   itsy
+  servo2 d30  --->    darl3  d30   itsy
+  LED    d33
+  sig6   d34
+  sig8   d35
+  x      d37  --->    LED    d37   itsy
+  x      d42  --->    sig2   d42   itsy
+
+
+
+ - - - - - - - - - - - - - - - - - - - - - - - - -
+ - - - - - - - - - - - - - - - - - - - - - - - - -
+ - - - - - - - - - - - - - - - - - - - - - - - - -
+
+
+Reorg'd ItsyBitsyM0
+                      SORTED
+                      ======
+  servo1 d13  --->    servo1 d13   itsy   COMMON DENOM - servo1 across two platforms
+  x      d11  --->    servo2 d11   itsy
+  servo4  d5  --->    servo3  d5   itsy
+  x       d2  --->    servo4  d2   itsy
+
+  x      d14  --->    sig1   d14   itsy
+  x      d42  --->    sig2   d42   itsy
+  cap2   d15  --->    sig3   d15   itsy   sig2 is way up at d42
+  cap3   d16  --->    sig4   d16   itsy
+
+  sig4   d20  --->    sig5   d20   itsybitsym0 d20 is sig5 crickit
+  x       d1  --->    sig6    d1   itsy
+  x       d3  --->    sig7    d3   itsy
+  x       d4  --->    sig8    d4   itsy
+
+  cap4   d17  --->    cap1   d17   itsy
+  x      d18  --->    cap2   d18   itsy
+  cap1   d24  --->    cap3   d24   itsy
+  x      d25  --->    cap4   d25   itsy
+
+  x      d28  --->    darl2  d28   itsy
+  servo2 d30  --->    darl3  d30   itsy
+  x      d29  --->    darl4  d29   itsy
+  x      d37  --->    LED    d37   itsy
+
+  servo3  d7
+  sig1   d12
+  sig3   d21
+  sig5   d22
+  sig7   d23
+  darl2  d26
+  darl1  d27
+  LED    d33
+  sig6   d34
+  sig8   d35
+
+test program (forth) (ignore this)
+: do 1 swap over over pinMode pinWrite ; : don 0 swap pinWrite ; : din dup do 500 delay don ;
+: din4 din din din din ;
+END.

@@ -1,8 +1,20 @@
-// Wed Jan 31 00:27:18 UTC 2018
-// 4737-a0e-01a-
+// Wed 30 May 17:49:01 UTC 2018
+// 4737-a3a-07a-  // see the m4 variant of this code for history of this shred
+
+// NOTE: Arduino told to use the Adafruit ItsyBitsy M0 board in the IDE.
+
+// trundlev
+// gluefinger
 
 // teleue
 // kepifik
+
+
+// previous timestamps:
+
+// Wed Jan 31 00:27:18 UTC 2018
+// 4737-a0e-01a-
+
 // ifladde 
 // kandra helgar tronde
 
@@ -41,7 +53,6 @@
 // Only Gemma M0 is unconfigured and untested, now, of the five platforms.
 
 
-// previous timestamps:
 
 // Tue Jan 16 02:30:09 UTC 2018
 // 4737-a0d-05j-

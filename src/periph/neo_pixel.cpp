@@ -1,3 +1,6 @@
+// Wed 30 May 17:49:01 UTC 2018
+// 4737-a3a-07a-
+
 // Tue Jan 16 02:30:09 UTC 2018
 // 4737-a0d-05j-
 
@@ -102,6 +105,37 @@
 
 // When we setup the NeoPixel library, we tell it how many pixels,
 // and which pin to use to send signals.
+
+/*
+ *    Narrative -- 30 May 2018
+ *
+ *    The system is configured as ItsyBitsyM0 by telling the Arduino IDE
+ *    that this is the correct, current target board (it is not!)
+ *
+ *    The Crickit (CPX variant) board is substituted for an ItsyBitsyM0
+ *    without informing the Arduino IDE that such is the case.
+ *
+ *    Signal2 on the Crickit is wired to the A1 standoff after removal
+ *    of the CircuitPlayground Express from the Crickit.
+ *
+ *    This is the passthrough to the 5V NeoPixel port of the Crickit;
+ *    instead of supplying a NeoPixel data signal from a bolted-on CPX,
+ *    the data signal come from the Crickit's own Signal2 pin (24-pin
+ *    female GPIO header of Crickit).
+ *
+ *    In this manner, Crickit is used to control a strand of NeoPixels
+ *    with a 5V (level-shifted) data path.
+ *
+ *    Caution: a 5 Volt DC source must be connected to the DC 2.1 mm
+ *    barrel jack of the Crickit, in addition to the USB programming
+ *    cable from a host PC.
+ */
+
+// Crickit-specific overrides, in the four lines that follow this one:
+#undef NUMPIXELS
+#define NUMPIXELS 8 // 8x strip 30 May 2018 Crickit 5V NeoPixel port
+#undef PIN
+#define PIN 42 // arbitrary - itsybitsym0 SIGNAL2 Crickit
 
 Adafruit_NeoPixel pixels = Adafruit_NeoPixel(NUMPIXELS, PIN, NEO_GRB + NEO_KHZ800);
 

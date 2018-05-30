@@ -1,3 +1,6 @@
+// Wed 30 May 17:49:01 UTC 2018
+// 4737-a3a-07a-
+
 // Fri Nov 24 04:49:08 UTC 2017
 // 4735-b0c-07z-   the -07x- is new Nov 19, 2017.
 
@@ -1818,6 +1821,10 @@ void _pinWrite(void) {
   digitalWrite(dStack_pop(), dStack_pop());
   // digitalWrite(13, HIGH);
 }
+
+// 30 May Crickit as ItsyBitsy M0:
+// 1 37 pinMode 1 37 pinWrite 1000 delay 0 37 pinWrite
+// for the internal LED of Crickit!
 
 const char pinMode_str[] = "pinMode";
 // ( u1 u2 -- )

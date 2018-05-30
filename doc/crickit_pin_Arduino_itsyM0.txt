@@ -113,4 +113,6 @@ Reorg'd ItsyBitsyM0
 test program (forth) (ignore this)
 : do 1 swap over over pinMode pinWrite ; : don 0 swap pinWrite ; : din dup do 500 delay don ;
 : din4 din din din din ;
+37 din
+37 dup dup dup din4
 END.

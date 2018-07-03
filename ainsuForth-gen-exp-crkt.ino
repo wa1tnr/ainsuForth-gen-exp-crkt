@@ -1,23 +1,23 @@
-// Wed 30 May 17:49:01 UTC 2018
-// 4737-a3a-07a-  // see the m4 variant of this code for history of this shred
+// Tue  3 Jul 20:04:42 UTC 2018
+// 4737-a3b-00d- // gen-exp-crkt CPX
 
-// NOTE: Arduino told to use the Adafruit ItsyBitsy M0 board in the IDE.
+// kanaflex
 
-// trundlev
-// gluefinger
+// NOTE:  use the Adafruit ItsyBitsy M0 board in the Arduino IDE.
 
-// teleue
-// kepifik
 
+// trundlev // gluefinger
+// teleue   // kepifik
 
 // previous timestamps:
+// Wed 30 May 17:49:01 UTC 2018
+// 4737-a3a-07a-  // see the m4 variant of this code for history of this shred
 
 // Wed Jan 31 00:27:18 UTC 2018
 // 4737-a0e-01a-
 
 // ifladde 
 // kandra helgar tronde
-
 
 // .arduino15/packages/adafruit/hardware/samd/1.0.21/variants/feather_m0_express/variant.h
 // that's the location for feather M0 Express that gave D29 and D30 correctly.  15 Feb 2018d
